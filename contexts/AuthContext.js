@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const response = await authService.login(email.password);
+    const response = await authService.login(email, password);
 
     if (response?.error) {
       return response;
